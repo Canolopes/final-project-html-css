@@ -1,0 +1,355 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'PTSans-Bold';
+    src: url("../fonts/PTSans-Bold.ttf");
+}
+body{
+    width: 90%;
+    margin: 0 auto 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid black;
+    box-shadow: -16px 16px 12px rgba(0, 0, 0, 0.6), 16px 16px 12px rgba(0, 0, 0, 0.6);
+}
+main{
+    display: flex;
+    padding: 0 1.5em;
+}
+header{
+    padding: 0.5em 0;
+    background-image: linear-gradient(to bottom, lightgrey 0%, red 100%);
+}
+header h2{
+    color: lightblue;
+    text-shadow: 3px 3px 4px black; 
+    padding-bottom: 1.75em;
+}
+img{
+    width: 200px;
+    float: left;
+}
+figure{
+    float: left;
+    width: 300px;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+figure img{
+    width: 100%;
+}
+figcaption{
+    padding-top: 0.15em;
+    display: block;
+    font-weight: bold;
+    border-bottom: 3px solid midnightblue;
+    padding-bottom: 0.25em;
+}
+h1{
+    color: white;
+    text-shadow: 3px 3px 4px black; 
+    font-family: "PTSans-Bold";
+    font-size: 300%;
+    padding-top: 0.15em;
+    font-style: italic;
+}
+h2{
+    color: midnightblue;
+    font-size: 175%;
+}
+p{
+    padding-bottom: 0.5em;
+}
+section h2{
+    padding: 0.25em 0;
+}
+section {
+    padding: 0.5em 0;
+}
+section{
+    flex-basis: 65%;
+}
+aside{
+    padding: 0.5em 3em;
+    margin-bottom: 1em;
+    flex-basis: 35%;
+}
+aside a {
+    font-size: 115%;
+    line-height: 2;
+    color: blue;
+}
+aside a:hover {
+    color: red;
+}
+aside a.email{
+    font-weight: bold;
+    font-size: 100%;
+}
+aside a.home{
+    font-size: 17px;
+}
+aside ul{
+    list-style-type: none;
+}
+i{
+    padding-right: 0.5em;
+}
+footer {
+    padding: 0.5em;
+    background-color: red;
+    color: white;
+    font-size: 85%;
+    text-align: center;
+}
+.navbar{
+    position: relative;
+    background-color: midnightblue;
+}
+.menu{
+    list-style: none;
+    font-weight: bold;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.5em;
+}
+.menu li{
+    position: relative;
+}
+.menu li a{
+    font-size: 125%;
+    color: white;
+    text-decoration: none;
+}
+ul.menu{
+    padding: 1em 0;
+}
+li.current{
+    border: solid white;
+    border-radius: 8px;
+    padding: 0 1em
+}
+.submenu{
+    z-index: 10;
+    background-color: midnightblue;
+    list-style: none;
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+}
+.submenu a:hover {
+    text-decoration: underline;
+}
+.submenu li{
+    padding: 1.35em 0.5em 0.5em 0em;
+    margin-right: 3em;
+    margin-left: 0.5em;
+}
+.menu-btn{
+        display: none;
+}
+.menu li:has(.submenu) > a::after {
+    color: white;
+    content: "\25BC";
+    font-size: 1rem;
+}
+.menu li:has(.submenu):hover > .submenu {
+    display: block;
+}
+#checkbox-toggle {display: none}
+#checkbox-toggle:checked ~ .menu {
+    display: flex;
+}
+header img:hover{
+        animation: spin 0.75s linear 1;     
+    }
+    @keyframes spin{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+aside ul li i{
+    transition: transform 0.75s ease-in-out;   
+    }
+aside ul li:hover i{
+    transform: rotate(360deg);
+}
+fieldset{
+    font-size: 120%;
+    border-radius: 3px;
+    padding: 0.5em 0.75em;
+    margin-top: 0.75em;
+}
+fieldset.info input{
+    width: 90%;
+}
+fieldset.info label{
+    display: block;
+}
+fieldset.fandom p{
+    padding-top: 0.5em;
+}
+fieldset.fandom p:first-of-type{
+    padding-top: 0;
+}
+fieldset.fandom label{
+    display: inline;
+}
+fieldset.moments label{
+    display: block;
+}
+input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+}
+input:required{
+    border: 2px solid red;
+}
+input:valid{
+    border: 2px solid green;
+}
+select:valid{
+    border: 2px solid green;
+}
+select{
+    width: 90.5%;
+}
+select:required:invalid{
+    border: 2px solid red;
+}
+legend h3{
+    color: midnightblue;
+}
+textarea{
+    margin-top: 0.25em;
+    padding: 0.2em;
+    font-size: 19.2px;
+    border-radius: 3px;
+    width: 95%;
+    display: block;
+}
+button{
+    margin-left: 16px;
+    font-size: 105%;
+    border: 3px solid black;
+    border-radius: 10px 10px 10px 10px;
+    width: 40%;
+    cursor: pointer;
+    padding: 0.5em;
+    font-weight: bold;
+    color: white;
+}
+button[type="submit"]{
+    background-color: midnightblue;
+    &:hover{
+        background-color: lightsteelblue;
+        color: black;
+    }
+}
+button[type="reset"]{
+    background-color: red;
+    &:hover{
+        background-color: lightpink;
+        color: black;
+    }
+}
+@media only screen and (max-width: 700px) {
+    header h1 {
+        text-align: center;
+    }
+    header h2, header img{
+        display: none;
+    }
+    .navbar{
+        padding: 0.75em 0;
+    }
+    .menu{
+        background-color: midnightblue;
+        list-style: none;
+        row-gap: 1.25em;
+        position: absolute;
+        left: 0;
+        display: none;
+        flex-direction: column;
+    }
+    ul.menu{
+        padding-left: 0.5em;
+    }
+    li.current{
+        border: solid white;
+        border-radius: 8px;
+        padding: 0 0.75em;
+        display: block;
+    }
+    .menu-btn{
+        display: block;
+        padding: 0em 1em;
+        font-size: 1.35rem;
+    }
+    .menu-btn::after{
+        content:"\2630";
+        color: white
+    }
+    #checkbox-toggle:checked ~ .menu {
+        display: flex;
+    }
+    .menu li:has(.submenu):hover > .submenu {
+        display: block;
+    }
+    .submenu{
+        list-style: none;
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 100%;
+    }
+    .submenu li{
+        margin: 0 0.1em 0.1em 0.1em;
+        padding-top: 0.1em;
+        white-space: nowrap;
+    }
+    ul.submenu{
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        padding-right: 2em;
+    }
+    .submenu a:hover {
+        text-decoration: underline;
+    }
+    .menu li:has(.submenu) > a::after {
+        color: white;
+        content: "\25b6";
+        font-size: 1rem;
+        padding: 0.25em;
+        margin-left: 0.3em;
+    }
+    #checkbox-toggle:checked + .menu-btn::after {
+        font-size: 1.75rem;
+        content: "\00D7";
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    section{
+        grid-row: 1;
+        grid-column: 1;
+    }
+    aside{
+        margin: 0 0 0.5em 0;
+        grid-row: 2;
+        grid-column: 1;
+    }
+    button{
+        font-size: 90%;
+        padding: 0.5em;
+    }
+}
