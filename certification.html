@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> 213 Hoops | Certification </title>
+	<link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href ="styles/certification.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <a href="index.html"><img src="images/clippers.png" alt="clippers logo"></a>
+    <h1>213 Hoops</h1>
+    <h2>The Best Website for Clippers Fans</h2>
+</header>  
+<nav class="navbar">
+    <input type="checkbox" id="checkbox-toggle"/>
+		<label for="checkbox-toggle" class="menu-btn"></label>
+		<ul class="menu">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#">Games</a>
+				<ul class="submenu">
+						<li><a href="last_game.html">Last Game</a></li>
+						<li><a href="game_history.html">Game History</a></li>
+					</ul>
+			</li>
+			<li><a href="#">Player Profiles</a>
+                <ul class="submenu">
+                    <li><a href="current_players.html">Current</a></li>
+                    <li><a href="historical_players.html">Historical</a></li>
+                </ul>
+            </li>
+			<li><a href="news.html">News</a></li>
+			<li><a href="standings.html">Standings</a></li>
+		</ul>
+</nav>
+<main>
+<section>
+<h2>213 Fan Certification Application</h2>
+		<p>Show us that your a <em>true</em> Clippers fan with the following application. Gain access to perks such as exclusive watch parties in the Los Angeles area, new merchandise from 213 Hoops, and the chance to win tickets weekly during the regular season!</p>	
+		<p>Asterisks (*) indicate required entries.</p>   
+		<form action="confirmation.html" method="post">
+		<fieldset class="info">
+			<legend><h3>Your Info</h3></legend>
+				<label for="firstname">First Name <span style="color: red">*</span></label>
+				<input type="text" name="firstname" id="firstname" required>
+                <label for="lastname">Last Name <span style="color: red">*</span></label>
+                <input type="text" name="lastname" id="lastname" required>
+				<label for="email">Email <span style="color: red">*</span></label>
+				<input type="email" name="email" id="email" required>
+				<label for="gender">Gender</label>
+				<select id="gender" name="gender">
+					<option value="">Select a gender</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="nonbinary">Non-Binary</option>
+				</select>
+				<label for="age">Age</label>
+				<select id="age" name="age">
+					<option value="">Select your age</option>
+					<option value="under18">Under 18</option>
+					<option value="18-34">18 - 34</option>
+					<option value="35-44">35 - 44</option>
+					<option value="50-69">50 - 69</option>
+					<option value="70+">70+</option>
+				</select>
+                <label for="area">Area<span style="color: red">*</span></label>
+                <select id="area" name="area" required>
+                    <option value="">Select your area</option>
+                    <option value="LA">Los Angeles County</option>
+                    <option value="outside">Other California Area</option>
+                    <option value="otherstate">Other State</option>
+                </select>
+		</fieldset>
+		<fieldset class="fandom">
+			<legend><h3>Fandom Specifics</h3></legend>
+			<p>Have you attended a game at the new Intuit Dome?</p>
+				<input type="radio" name="fandom" id="yes" value="yes" checked>
+				<label for="yes">Yes</label>
+				<input type="radio" name="fandom" id="never" value="never">
+				<label for="never">Never</label>
+				<input type="radio" name="fandom" id="crypto" value="crypto">
+				<label for="crypto">Attended at Crypto/Staples</label>
+			<p>How long have you been a fan?</p>
+				<input type="radio" name="time" id="5" value="5" checked>
+				<label for="5">0-5 Years</label>
+				<input type="radio" name="time" id="5-10" value="5-10">
+				<label for="5-10">5-10 Years</label>
+				<input type="radio" name="time" id="10+" value="10+">
+				<label for="10+">10+ Years!</label>
+            <p>Was Michael Olowokandi a bust?</p>
+                <input type="radio" name="bust" id="yes!" value="yes!" checked>
+                <label for="yes!">Yes!</label>
+                <input type="radio" name="bust" id="redyes" value="redyes">
+                <label class="red" for="redyes">Yes But in Red!</label>
+                <input type="radio" name="bust" id="no" value="no">
+                <label for="no">No... Kidding, I meant Yes!</label>
+		</fieldset>
+        <fieldset class="moments">
+			<legend><h3>Best Game Moments</h3></legend>
+			<p>Select all of the best game moments you have seen.</p>
+				<label for="djdunk"><input type="checkbox" name="djdunk" id="djdunk" value="djdunk">
+                DeAndre Jordan Monster Slam Over Brandon Knight</label>
+				<label for="bgdunk"><input type="checkbox" name="bgdunk" id="bgdunk" value="bgdunk">
+                Blake Griffin Posterizes Kendrink Perkins</label>
+				<label for="kawhi"><input type="checkbox" name="kawhi" id="kawhi" value="kawhi">
+                Kawhi Drops 45 in Game 6 against Mavericks</label>
+				<div>
+				<label for="comments"><input type="checkbox" name="other" id="other" value="other">
+                Other moment (be specific!):</label>
+				<textarea id="comments"></textarea>
+				</div>	
+		</fieldset>
+		<fieldset>
+			<button type="submit">Submit</button>
+			<button type="reset">Reset</button>
+		</fieldset>
+        </form>
+</section>
+<aside>
+<h2>Historical Player Profiles:</h2>
+<nav>
+	<ul>
+		<li><i class="fa-solid fa-basketball"></i><a href="jamal_crawford.html">Jamal Crawford</a></li>
+		<li><i class="fa-solid fa-basketball"></i><a href="blake_griffin.html">Blake Griffin</a></li>
+		<li><i class="fa-solid fa-basketball"></i><a href="elton_brand.html">Elton Brand</a></li>
+	</ul>
+<h2>Rumors</h2>
+    <ul>
+        <li><i class="fa-solid fa-comments"></i><a href="lamelo_ball.html">LaMelo Ball to Los Angeles?</a></li>
+        <li><i class="fa-solid fa-comments"></i><a href="game_7.html">What's Next After Unceremonious Game 7 Loss?</a></li>
+    </ul>
+<h2>Become 213 Certified</h2>
+    <ul>
+        <li><i class="fa-solid fa-basketball"></i><a href="certification.html">Submit Your Application</a></li>
+    </ul>
+<h2>Last Game</h2>
+    <ul>
+        <li><i class="fa-solid fa-basketball"></i><a href="last_game.html">Clippers@Nuggets</a></li>
+    </ul>
+<h2>Contact Us</h2>
+    <ul>
+        <li><i class="fa-sharp fa-solid fa-envelope"></i>Send us an <a class="email" href="mailto:support@213hoops.com">Email</a></li>
+    </ul>
+<h2><i class="fa-solid fa-basketball"></i><a class="home" href="index.html">Return Home</a></h2>
+    </nav>
+</aside>
+</main>
+<footer>
+    <p> &#169; 213 Hoops, 2025 </p>
+    <p> Website by Enrique Cano </p>
+</footer> 
+</body>
+</html>
